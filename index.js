@@ -59,7 +59,23 @@ addASong = async () => {
 viewAllSongs = async () => {
   try {
     console.log("chose to view all songs");
-    menu();
+    db.query(`SELECT 
+        song_name as 'song', 
+        artist, 
+        genre, 
+        user.name as 'picked by' 
+        FROM song 
+        LEFT JOIN user 
+        ON song.user_id = user.id`, 
+        function (err, results) {
+        if (err) {
+            throw err
+        } else {
+            const table = cTable.getTable(results);
+            console.log(table);
+            menu();
+        }
+    })
   } catch (err) {
     console.log(err);
   }
