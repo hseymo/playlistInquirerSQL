@@ -1,0 +1,28 @@
+{
+  "name": "playlistinquirersql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "resetdb": "mysql -u root -p < ./db/schema.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hseymo/playlistInquirerSQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hseymo/playlistInquirerSQL/issues"
+  },
+  "homepage": "https://github.com/hseymo/playlistInquirerSQL#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^16.0.2",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.3"
+  }
+}
